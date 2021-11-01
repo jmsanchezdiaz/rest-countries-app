@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 import { colors } from "../../colors/colors";
 import CountryDetails from "../../components/CountryDetails/CountryDetails";
@@ -12,11 +12,16 @@ const DetailPage = () => {
   const { darkMode } = useDesctructuredContext();
   const { countryCode } = useParams();
   const [country, setCountry] = useState();
+  const isMounted = useRef(false);
 
   useEffect(() => {
-    getCountryByCode(countryCode).then((response) => {
-      setCountry(response);
-    });
+    isMounted.current = true;
+    if (isMounted.current) {
+      getCountryByCode(countryCode).then((response) => {
+        setCountry(response);
+      });
+    }
+    return () => (isMounted.current = false);
   }, [countryCode]);
 
   return (

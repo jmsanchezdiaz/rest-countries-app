@@ -12,13 +12,13 @@ import {
 import { colors } from "../../colors/colors";
 import { useHistory } from "react-router";
 import { useDesctructuredContext } from "../../customHooks/useDesctructuredContext";
-import { useEffect, useState } from "react";
-import Loader from "../../components/Loader/Loader";
+import { useEffect, useState, useRef } from "react";
 
 const Homepage = () => {
   const [allCountries, setAllCountries] = useState();
   const [countries, setCountries] = useState(allCountries);
   const history = useHistory();
+  const isMounted = useRef(false);
 
   const { country, continents, handleChange } = useForm({
     country: "",
@@ -52,12 +52,18 @@ const Homepage = () => {
   };
 
   useEffect(() => {
-    getCountries().then((response) => {
-      if (response) {
-        setAllCountries(response);
-        setCountries(response);
-      }
-    });
+    isMounted.current = true;
+
+    if (isMounted.current) {
+      getCountries().then((response) => {
+        if (response) {
+          setAllCountries(response);
+          setCountries(response);
+        }
+      });
+    }
+
+    return () => (isMounted.current = false);
   }, []);
 
   return (

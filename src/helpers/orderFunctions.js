@@ -1,9 +1,13 @@
 export const orderCountriesByName = (countries, target) => {
-  return countries.filter((countryElm) => countryElm.name.includes(target));
+  return countries.filter((countryElm) =>
+    countryElm.name.toLowerCase().includes(target.toLowerCase())
+  );
 };
 
 export const orderCountriesByRegion = (countries, target) => {
-  return countries.filter((countryElm) => countryElm.region === target);
+  return countries.filter(
+    (countryElm) => countryElm.region.toLowerCase() === target.toLowerCase()
+  );
 };
 
 export const orderCountriesByRegionAndName = (
