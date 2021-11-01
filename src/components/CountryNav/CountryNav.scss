@@ -1,0 +1,12 @@
+@import "../../generals.scss";
+
+.country__navbar {
+  margin-bottom: 3rem;
+  button {
+    @extend .btn-style;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+}

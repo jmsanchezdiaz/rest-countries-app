@@ -1,0 +1,23 @@
+@import "../../generals.scss";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.125rem;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.15);
+  padding-inline: 1rem;
+
+  &__mode {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    @extend .rst-input;
+  }
+
+  @media (max-width: 500px) {
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}

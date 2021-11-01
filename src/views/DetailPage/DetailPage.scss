@@ -1,0 +1,30 @@
+@import "../../generals.scss";
+
+.detailpage {
+  width: 100%;
+  padding: 3rem;
+  min-height: 100vh;
+
+  .detailpage__info-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    img {
+      max-width: 50%;
+      object-fit: cover;
+      height: 25rem;
+      width: 45rem;
+    }
+
+    @media (max-width: 666px) {
+      & {
+        justify-content: space-between;
+        flex-direction: column;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

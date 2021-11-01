@@ -1,0 +1,42 @@
+@import "../../generals.scss";
+
+.detailpage__text {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: 1.8;
+  b {
+    font-weight: $bold;
+  }
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  .detailpage__row {
+    display: flex;
+    gap: 5%;
+  }
+
+  .detailpage__borders {
+    button {
+      margin: 0 0.5rem;
+      @extend .btn-style;
+    }
+  }
+
+  @media (max-width: 666px) {
+    & {
+      max-width: 100%;
+      gap: 1rem;
+
+      .detailpage__row {
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../../generals";
+
+.pagination {
+  display: flex;
+  padding: 2rem 0;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  button {
+    font-size: 1.25rem;
+    @extend .rst-input;
+  }
+}

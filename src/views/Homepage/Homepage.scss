@@ -1,0 +1,58 @@
+@import "../../generals.scss";
+
+.homepage {
+  min-height: calc(100vh - 3.125rem);
+
+  &__container {
+    width: 80%;
+    padding-top: 3rem;
+    margin: auto;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+  }
+
+  &__input-container {
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    input {
+      height: 2rem;
+      width: 100%;
+      cursor: auto;
+      @extend .rst-input;
+    }
+    button {
+      padding: 0 1rem;
+      @extend .rst-input;
+    }
+  }
+
+  &__select {
+    padding: 0.5rem;
+    @extend .rst-input;
+
+    outline: none;
+    border: none;
+  }
+
+  @media screen and (max-width: 410px) {
+    &__form {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    &__input-container {
+      width: 100%;
+    }
+  }
+}
