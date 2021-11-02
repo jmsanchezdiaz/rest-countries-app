@@ -8,10 +8,11 @@ import "./CountriesList.scss";
 const CountriesList = ({ countries, darkMode }) => {
   const { filtered, pageNumber, goNextPage, goPrevPage, amountOfPages } =
     usePagination(countries, 12);
+  const isLoaded = countries.length > 0;
 
   return (
     <div className="countries">
-      {countries ? (
+      {isLoaded ? (
         <div className="countries__list">
           {filtered?.map((country) => {
             return (
@@ -34,7 +35,7 @@ const CountriesList = ({ countries, darkMode }) => {
         />
       )}
 
-      {countries && (
+      {isLoaded && (
         <CountryPaginationControls
           darkMode={darkMode}
           colors={colors}

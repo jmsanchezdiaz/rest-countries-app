@@ -15,12 +15,14 @@ const DetailPage = () => {
   const isMounted = useRef(false);
 
   useEffect(() => {
-    isMounted.current = true;
-    if (isMounted.current) {
-      getCountryByCode(countryCode).then((response) => {
-        setCountry(response);
-      });
-    }
+    getCountryByCode(countryCode).then((response) => {
+      if (isMounted) {
+        if (response) {
+          setCountry(response);
+        }
+      }
+    });
+
     return () => (isMounted.current = false);
   }, [countryCode]);
 

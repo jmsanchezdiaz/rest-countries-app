@@ -7,12 +7,12 @@
     gap: 1rem;
 
     @media screen and (max-width: 810px) {
-      &__countries {
+      & {
         grid-template-columns: repeat(2, 1fr);
       }
     }
     @media screen and (max-width: 410px) {
-      &__countries {
+      & {
         grid-template-columns: 1fr;
       }
     }

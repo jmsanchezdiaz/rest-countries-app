@@ -8,7 +8,7 @@ export const DarkThemeProvider = ({ children }) => {
   );
 
   useEffect(() => {
-    window.localStorage.setItem("darkModeOn", darkMode.toString());
+    window.localStorage.setItem("darkModeOn", JSON.stringify(darkMode));
   }, [darkMode]);
 
   const toggleDarkMode = () => setDarkMode((prevTheme) => !prevTheme);

@@ -1,3 +1,8 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowAltCircleLeft,
+  faArrowAltCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 import "./CountryPaginationControls.scss";
 
 const CountryPaginationControls = ({
@@ -16,7 +21,7 @@ const CountryPaginationControls = ({
         }}
         onClick={goPrevPage}
       >
-        Previous
+        <FontAwesomeIcon icon={faArrowAltCircleLeft} />
       </button>
       <h3
         style={{
@@ -31,7 +36,7 @@ const CountryPaginationControls = ({
         }}
         onClick={goNextPage}
       >
-        Next
+        <FontAwesomeIcon icon={faArrowAltCircleRight} />
       </button>
     </div>
   );

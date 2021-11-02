@@ -15,10 +15,10 @@ import { useDesctructuredContext } from "../../customHooks/useDesctructuredConte
 import { useEffect, useState, useRef } from "react";
 
 const Homepage = () => {
-  const [allCountries, setAllCountries] = useState();
-  const [countries, setCountries] = useState(allCountries);
+  const [allCountries, setAllCountries] = useState([]);
+  const [countries, setCountries] = useState([]);
   const history = useHistory();
-  const isMounted = useRef(false);
+  const isMounted = useRef(true);
 
   const { country, continents, handleChange } = useForm({
     country: "",
@@ -52,18 +52,16 @@ const Homepage = () => {
   };
 
   useEffect(() => {
-    isMounted.current = true;
+    getCountries().then((response) => {
+      if (isMounted.current && response) {
+        setAllCountries(response);
+        setCountries(response);
+      }
+    });
 
-    if (isMounted.current) {
-      getCountries().then((response) => {
-        if (response) {
-          setAllCountries(response);
-          setCountries(response);
-        }
-      });
-    }
-
-    return () => (isMounted.current = false);
+    return () => {
+      isMounted.current = false;
+    };
   }, []);
 
   return (
