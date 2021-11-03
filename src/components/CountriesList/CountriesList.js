@@ -6,8 +6,14 @@ import Loader from "../Loader/Loader";
 import "./CountriesList.scss";
 
 const CountriesList = ({ countries, darkMode }) => {
-  const { filtered, pageNumber, goNextPage, goPrevPage, amountOfPages } =
-    usePagination(countries, 12);
+  const {
+    filtered,
+
+    pageNumber,
+    goNextPage,
+    goPrevPage,
+    amountOfPages,
+  } = usePagination(countries, 12);
   const isLoaded = countries.length > 0;
 
   return (
