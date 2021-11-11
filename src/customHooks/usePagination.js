@@ -16,13 +16,16 @@ export const usePagination = (initState = [], maxElements) => {
       ? initState.length
       : pageNumber * maxElements;
 
-  const resetPagination = () => {
-    setPageState({
-      curIndex: 0,
-      nxtIndex: maxElements,
-      pageNumber: 1,
-    });
-  };
+  useEffect(() => {
+    const resetPagination = () => {
+      setPageState({
+        curIndex: 0,
+        nxtIndex: maxElements,
+        pageNumber: 1,
+      });
+    };
+    resetPagination();
+  }, [initState, maxElements]);
 
   const goNextPage = () => {
     if (curIndex + maxElements < initState.length) {
@@ -58,6 +61,5 @@ export const usePagination = (initState = [], maxElements) => {
     goNextPage,
     goPrevPage,
     amountOfPages,
-    resetPagination,
   };
 };

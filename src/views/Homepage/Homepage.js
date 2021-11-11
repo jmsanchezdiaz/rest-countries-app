@@ -80,6 +80,7 @@ const Homepage = () => {
             className="homepage__input-container"
           >
             <button
+              tabIndex="1"
               style={{
                 color: darkMode ? colors.white : colors.darkGray,
               }}
@@ -88,6 +89,7 @@ const Homepage = () => {
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </button>
             <input
+              tabIndex="2"
               style={{
                 color: darkMode ? colors.white : colors.darkGray,
               }}
@@ -100,6 +102,7 @@ const Homepage = () => {
             />
           </div>
           <select
+            tabIndex="3"
             style={{
               color: darkMode ? colors.white : colors.darkGray,
               backgroundColor: darkMode ? colors.darkBlue : colors.white,

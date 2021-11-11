@@ -10,5 +10,8 @@
   button {
     font-size: 2rem;
     @extend .rst-input;
+    &:focus {
+      outline: none;
+    }
   }
 }

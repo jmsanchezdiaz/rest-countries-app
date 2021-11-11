@@ -16,6 +16,7 @@ const CountryPaginationControls = ({
   return (
     <div className="pagination">
       <button
+        tabIndex="-1"
         style={{
           color: darkMode ? colors.white : colors.black,
         }}
@@ -31,6 +32,7 @@ const CountryPaginationControls = ({
         {pageNumber} of {amountOfPages}
       </h3>
       <button
+        tabIndex="-1"
         style={{
           color: darkMode ? colors.white : colors.black,
         }}

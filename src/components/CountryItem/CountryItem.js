@@ -1,24 +1,19 @@
-import { useHistory } from "react-router";
-
+import { Link } from "react-router-dom";
 import "./CountryItem.scss";
 
 const CountryItem = ({ darkMode, country, colors }) => {
-  const history = useHistory();
   return (
     <div
       style={{
         color: darkMode ? colors.white : colors.black,
         backgroundColor: darkMode ? colors.darkBlue : colors.white,
       }}
-      onClick={() => {
-        history.push({
-          pathname: `/country/${country.alpha3Code}`,
-        });
-      }}
       className="card"
       key={country.name}
     >
-      <img className="card__image" src={country.flags?.png} alt="flag" />
+      <Link to={`/country/${country?.alpha2Code}`}>
+        <img className="card__image" src={country.flags?.png} alt="flag" />
+      </Link>
       <div className="card__text">
         <h3>{country.name}</h3>
         <p>
