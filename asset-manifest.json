@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/rest-countries-app/static/css/main.0f3b4336.chunk.css",
-    "main.js": "/rest-countries-app/static/js/main.56238dc4.chunk.js",
-    "main.js.map": "/rest-countries-app/static/js/main.56238dc4.chunk.js.map",
+    "main.css": "/rest-countries-app/static/css/main.f01c33e1.chunk.css",
+    "main.js": "/rest-countries-app/static/js/main.0780e452.chunk.js",
+    "main.js.map": "/rest-countries-app/static/js/main.0780e452.chunk.js.map",
     "runtime-main.js": "/rest-countries-app/static/js/runtime-main.3a680cec.js",
     "runtime-main.js.map": "/rest-countries-app/static/js/runtime-main.3a680cec.js.map",
-    "static/js/2.a8e9de6d.chunk.js": "/rest-countries-app/static/js/2.a8e9de6d.chunk.js",
-    "static/js/2.a8e9de6d.chunk.js.map": "/rest-countries-app/static/js/2.a8e9de6d.chunk.js.map",
+    "static/js/2.b4e475c4.chunk.js": "/rest-countries-app/static/js/2.b4e475c4.chunk.js",
+    "static/js/2.b4e475c4.chunk.js.map": "/rest-countries-app/static/js/2.b4e475c4.chunk.js.map",
     "index.html": "/rest-countries-app/index.html",
-    "static/css/main.0f3b4336.chunk.css.map": "/rest-countries-app/static/css/main.0f3b4336.chunk.css.map",
-    "static/js/2.a8e9de6d.chunk.js.LICENSE.txt": "/rest-countries-app/static/js/2.a8e9de6d.chunk.js.LICENSE.txt"
+    "static/css/main.f01c33e1.chunk.css.map": "/rest-countries-app/static/css/main.f01c33e1.chunk.css.map",
+    "static/js/2.b4e475c4.chunk.js.LICENSE.txt": "/rest-countries-app/static/js/2.b4e475c4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3a680cec.js",
-    "static/js/2.a8e9de6d.chunk.js",
-    "static/css/main.0f3b4336.chunk.css",
-    "static/js/main.56238dc4.chunk.js"
+    "static/js/2.b4e475c4.chunk.js",
+    "static/css/main.f01c33e1.chunk.css",
+    "static/js/main.0780e452.chunk.js"
   ]
 }
