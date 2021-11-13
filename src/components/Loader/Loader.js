@@ -8,16 +8,18 @@ const Loader = ({
   color,
 }) => {
   return (
-    <div
-      style={{
-        borderWidth: size.toString(),
-        width: width.toString(),
-        height: height.toString(),
-        borderLeftColor: color,
-        animationDuration: speed.toString(),
-      }}
-      className="loader"
-    ></div>
+    <div className="container">
+      <div
+        className="loader"
+        style={{
+          borderWidth: size.toString(),
+          width: width.toString(),
+          height: height.toString(),
+          borderLeftColor: color,
+          animationDuration: speed.toString(),
+        }}
+      ></div>
+    </div>
   );
 };
 
