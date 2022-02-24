@@ -33,8 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://jmsanchezdiaz.github.io/rest-countries-app/)
 
 ## My process
 
@@ -54,7 +53,7 @@ How to implement Dark Mode in React.
 ## Author
 
 - Website - [Juan Manuel Sanchez Diaz](https://jmsanchezdiaz.github.io/portfolio)
-- LinkedIn - [Juan Manuel Sanchez Diaz](https://www.linkedin.com/in/juan-manuel-sanchez-diaz-1bb0661bb/)
+- LinkedIn - [Juan Manuel Sanchez Diaz](https://www.linkedin.com/in/juan-manuel-sanchez-diaz/)
 - Twitter - [@juanmasd2002](https://www.twitter.com/juanmasd2002)
 
 ## Acknowledgments
