@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./static/screenshot.jpg)
+![](./static/Screenshot 2022-01-15 013628.png)
 
 ### Links
 
